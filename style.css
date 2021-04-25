@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;1,400;1,600&display=swap");
+
+/* Global Styles */
+:root {
+	--font-color: #fff;
+	--font-color-hover: #004f9e;
+	--dark-skyBlue: #1a8cff;
+	--light-skyBlue: #80bfff;
+	--very-light-skyBlue: #719ece;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Source Sans Pro", sans-serif;
+}
+
+header,
+.searchBar,
+.content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+/* Header Section */
+.header__container {
+	padding: 20px;
+	background: linear-gradient(var(--dark-skyBlue), var(--light-skyBlue));
+}
+
+.header__title {
+	font-size: 1.33em;
+	line-height: 1;
+	color: var(--font-color);
+}
+
+nav {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+
+button {
+	cursor: pointer;
+	background: transparent;
+	border: none;
+	color: var(--font-color);
+}
+
+button:hover {
+	color: var(--font-color-hover);
+}
+
+.addTodo,
+.showList {
+	margin-right: 20px;
+}
+
+/* Search Bar */
+.searchBar {
+	margin-top: 20px;
+	margin-bottom: 40px;
+	display: flex;
+	flex-direction: row;
+}
+
+.todo-searchBar {
+	padding: 5px 10px 5px 10px;
+	width: 87%;
+	border: solid 2px var(--light-skyBlue);
+	outline: none;
+}
+
+.todo-searchBar:focus {
+	border: solid 2px var(--dark-skyBlue);
+	box-shadow: 0 0 10px var(--very-light-skyBlue);
+}
+
+.searchBtn {
+	position: absolute;
+	right: 38px;
+	color: var(--light-skyBlue);
+}
+/* Content Section */
