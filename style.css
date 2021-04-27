@@ -2,8 +2,8 @@
 
 /* Global Styles */
 :root {
-	--font-color: #fff;
-	--font-color-hover: #004f9e;
+	--white: #fff;
+	--dark-blue: #004f9e;
 	--dark-skyBlue: #1a8cff;
 	--light-skyBlue: #80bfff;
 	--very-light-skyBlue: #719ece;
@@ -17,24 +17,41 @@
 }
 
 header,
-.searchBar,
-.content {
+.searchBar {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
 }
 
+.header__container,
+.searchBar,
+.content {
+	padding: 20px;
+}
+
+.hide {
+	display: none;
+}
+
 /* Header Section */
 .header__container {
-	padding: 20px;
 	background: linear-gradient(var(--dark-skyBlue), var(--light-skyBlue));
 }
 
-.header__title {
+.filter__todo {
 	font-size: 1.33em;
 	line-height: 1;
-	color: var(--font-color);
+	color: var(--white);
+	font-weight: 600;
+	cursor: pointer;
+	outline: none;
+	border: none;
+	background-color: var(--dark-skyBlue);
+}
+
+.filter__todo option {
+	color: var(--dark-blue);
 }
 
 nav {
@@ -47,11 +64,11 @@ button {
 	cursor: pointer;
 	background: transparent;
 	border: none;
-	color: var(--font-color);
+	color: var(--white);
 }
 
 button:hover {
-	color: var(--font-color-hover);
+	color: var(--dark-blue);
 }
 
 .addTodo,
@@ -59,17 +76,22 @@ button:hover {
 	margin-right: 20px;
 }
 
+/* Add new task */
+.addNewTask {
+	background-color: var(--white);
+	padding: 5px;
+	text-align: center;
+}
+
 /* Search Bar */
 .searchBar {
-	margin-top: 20px;
-	margin-bottom: 40px;
 	display: flex;
 	flex-direction: row;
 }
 
 .todo-searchBar {
 	padding: 5px 10px 5px 10px;
-	width: 87%;
+	width: 100%;
 	border: solid 2px var(--light-skyBlue);
 	outline: none;
 }
@@ -84,4 +106,16 @@ button:hover {
 	right: 38px;
 	color: var(--light-skyBlue);
 }
+
 /* Content Section */
+.date {
+	display: flex;
+}
+
+.day {
+	margin-right: 10px;
+}
+
+.month-date {
+	line-height: 1.5;
+}
